@@ -1,0 +1,66 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Страница — 1" id="mfqrUymiCWebkhwJguR4">
+    <mxGraphModel dx="956" dy="988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Bba-xzNpZsTvwluypwJz-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="Bba-xzNpZsTvwluypwJz-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="310" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fdIL_fXsYrBAMfs7bYYP-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="fdIL_fXsYrBAMfs7bYYP-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="170" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-1" value="Пациент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="399" y="90" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.525;entryY=-0.034;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Bba-xzNpZsTvwluypwJz-2" target="Bba-xzNpZsTvwluypwJz-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-2" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;CRM&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="355" y="400" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.005;entryY=0.418;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Bba-xzNpZsTvwluypwJz-4" target="Bba-xzNpZsTvwluypwJz-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-4" value="Лаборант" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="400" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-7" value="База CRM" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="349" y="570" width="125" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-8" value="Файлы с результатами&amp;nbsp;&lt;div&gt;анализов пацинета&amp;nbsp;&lt;/div&gt;&lt;div&gt;с персональнымми данными&lt;/div&gt;&lt;div&gt;RBAC&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="170" y="425" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Bba-xzNpZsTvwluypwJz-11" target="Bba-xzNpZsTvwluypwJz-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-11" value="Специалист и&amp;nbsp;&lt;div&gt;администратор&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="670" y="405" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-14" value="Получение результатов&amp;nbsp;&lt;div&gt;анализов&lt;/div&gt;&lt;div&gt;RBAC&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="490" y="430" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Bba-xzNpZsTvwluypwJz-15" value="Получение результатов&amp;nbsp;&lt;div&gt;анализов&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="239" y="190" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fdIL_fXsYrBAMfs7bYYP-2" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Портал&lt;div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="354" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fdIL_fXsYrBAMfs7bYYP-3" value="API Gateway" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="384" y="330" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fdIL_fXsYrBAMfs7bYYP-5" value="TSL 1.2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="220" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
