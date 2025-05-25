@@ -1,0 +1,64 @@
+@startuml
+
+!include <C4/C4_Container>
+title Medicamente Context Diagram
+top to bottom direction
+
+Person(Administrator, "Сотрудник ресепшена", "Регистрация, консультация пациента")
+Person(Doctor, "Медицинский специалист", "Прием пациента")
+Person(Cassier, "Кассир", "Прием платежа")
+Person(Bookkeeper, "Бухгалтер", "Процессинг безналичных платежи")
+Person(Warehousekeeper, "Сотрудник склада", "Работа с товарно-материальными ценностями")
+Person_Ext(Patient, "Пациент", "Запись на приём, просмотр мед.карты")
+
+System_Ext(Laboratory, "Медицинская лаборатория", "Подготовка результатов анализов")
+System_Ext(Bank, "Банк", "Прием платежей")
+System_Ext(Accounting, "1C Бухгалтерия", "Учёт платежей и зарплат")
+System_Ext(TradeWarehouse, "1C Торговля и склад", "Учёт товарно-материальных ценностей")
+
+System_Boundary(Medicamente, "Медикаменте") {
+    Container(Web, "Портал для клиента", "Запись на прием, просмотра мед.карты.")
+    Container(Mobile, "Мобильное приложение", "Запись на прием, просмотра мед.карты.")
+    Container(CRM, "CRM система", "Внутренни")
+    Container(API, "API Gateway", "Kong/Nginx, Keycloak", "Маршрутизация запросов. Аутентификация")
+    Container(CRMapi, "API CRM", "Kong/Nginx, Keycloak", "Маршрутизация запросов. Аутентификация")
+    Container(Service, "Сервис лаборатории", "Python/Flask", "Получение документов с анализамми")
+    Container(DataLake, "Data Lake", "Apache Spark", "Хранилище")
+    Container(Storage, "Файловое хранилище", "S3/MinIO", "Хранение медицинских документов")
+    Container(Kafka, "Kafka", "Kafka", "Брокер сообщений")
+    Container(Audit, "Система аудита", "Elasticsearch")
+    Container(Monitoring, "Система мониторинга", "Prometheus/Grafana")
+}
+
+Rel(Patient, Web, "Запись на прием", "HTTPS")
+Rel(Patient, Mobile, "Получает уведомления", "Push")
+Rel(Administrator, CRM, "Регистрация пациента", "HTTPS")
+Rel(Doctor, CRM, "Прием пациента", "HTTPS")
+Rel(Cassier, Accounting, "Прием платежа", "HTTPS")
+Rel(Bookkeeper, Accounting, "Процессинг платежей и учет зарплаты", "OLE")
+Rel(Warehousekeeper, TradeWarehouse, "Учет ТМЦ", "OLE")
+
+Rel(Web, API, "API запросы", "HTTPS", "TSL 1.2")
+Rel(Mobile, API, "API запросы", "HTTPS", "TSL 1.2")
+Rel(CRM, CRMapi, "API запросы", "HTTPS", "TSL 1.2")
+Rel(CRMapi, API, "API запросы", "HTTPS", "TSL 1.2")
+
+Rel(API, CRM, "Управление данными", "gRPC","RBAC")
+Rel(API, Service, "Запрос анализов", "HTTPS/mTLS","RBAC")
+
+Rel(Service, Laboratory, "Получение анализов", "HTTPS/mTLS")
+Rel(Accounting, Bank, "Получает платежи", "OLE/API")
+Rel(Kafka, Accounting, "Получает платежи", "OLE/API")
+Rel(Kafka, TradeWarehouse, "Получение ТМЦ", "OLE/API")
+Rel(CRM, Kafka, "Экспорт финансовых данных", "OLE/API")
+
+Rel(CRM, DataLake, "Экспорт анонимизированных данных", "Kafka")
+Rel(CRM, Storage, "Хранение анализов", "S3 API")
+
+Rel(Monitoring, Audit, "Анализ логов", "PromQL")
+Rel(Monitoring, CRM, "Метрики доступа", "Prometheus")
+
+Rel(CRM, Audit, "Логи действий, доступа", "Kafka")
+Rel(Kafka, Audit, "Логи платежей", "Kafka")
+
+@enduml.
